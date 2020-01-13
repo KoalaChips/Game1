@@ -41,6 +41,10 @@ namespace Game1
             
             // to test staging
 
+            // to test staging 1
+            // to test staging 2
+
+
             // TODO: use this.Content to load your game content here
             ballTexture = Content.Load<Texture2D>("ball");
         }
