@@ -47,7 +47,7 @@ namespace Game1
             //
 
             // TODO: use this.Content to load your game content here
-            ballTexture = Content.Load<Texture2D>("ball.png");
+            ballTexture = Content.Load<Texture2D>("ball");
         }
 
         /// <summary>
