@@ -9,6 +9,8 @@ namespace Game1
     /// </summary>
     public class Game1 : Game {
         Texture2D ballTexture;
+        Vector2 ballPosition;
+        float ballSpeed;
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -26,6 +28,9 @@ namespace Game1
         /// </summary>
         protected override void Initialize() {
             // TODO: Add your initialization logic here
+            ballPosition = new Vector2(graphics.PreferredBackBufferWidth / 2,
+                graphics.PreferredBackBufferHeight / 2);
+            ballSpeed = 100f;
 
             base.Initialize();
         }
@@ -47,7 +52,7 @@ namespace Game1
             //
 
             // TODO: use this.Content to load your game content here
-            ballTexture = Content.Load<Texture2D>("ball.png");
+            ballTexture = Content.Load<Texture2D>("ball");
         }
 
         /// <summary>
@@ -84,7 +89,7 @@ namespace Game1
 
             // TODO: Add your drawing code here
             spriteBatch.Begin();
-            spriteBatch.Draw(ballTexture, new Vector2(0, 0), Color.White);
+            spriteBatch.Draw(ballTexture, ballPosition, Color.White);
             spriteBatch.End();
 
             base.Draw(gameTime);
